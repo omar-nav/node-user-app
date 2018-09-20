@@ -9,10 +9,11 @@ const transporter = nodemailer.createTransport({
 })
 exports.sendMail = (email) => {
   transporter.sendMail({
-    from: 'Oswaldinho \U+1F525',
+    from: 'Oswaldinho',
     to: email,
-    subject: 'Bienvendio al es',
-    text: 'saquen las beers \U+2728',
+    subject: 'jordy69',
+    text: ';)',
     html: '<h1>es en serio vamos a beber...o no! :fire:</h1>'
-  })
+  }).then(info => console.log(info))
+    .catch(e => console.log(e))
 }
